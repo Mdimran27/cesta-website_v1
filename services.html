@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cestasoft - What We Do</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&family=Russo+One&display=swap"
+          rel="stylesheet">
+     <style>
+          /* --- 1. Variables and Base Styling --- */
+          :root {
+               --primary: #f84120;
+               --secondary: #1a2b4c;
+               --white: #ffffff;
+               --accent: #3498db;
+               --light: #f8f9fa;
+               --dark: #212529;
+               --footer-text: #bdc3c7;
+               --gradient: linear-gradient(135deg, #f84120 0%, #ff6b4a 100%);
+               --gradient-dark: linear-gradient(135deg, #1a2b4c 0%, #2c3e50 100%);
+          }
+
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: 'Open Sans', sans-serif;
+               line-height: 1.7;
+               color: var(--dark);
+               overflow-x: hidden;
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+               font-family: 'Montserrat', sans-serif;
+               font-weight: 700;
+               line-height: 1.3;
+          }
+
+          .primary-color {
+               color: var(--primary);
+          }
+
+          /* Header */
+          .navbar {
+               background-color: rgba(255, 255, 255, 0.98);
+               box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+               padding: 15px 0;
+               transition: all 0.4s ease;
+          }
+
+          .navbar.scrolled {
+               padding: 10px 0;
+               background-color: rgba(255, 255, 255, 0.98);
+               backdrop-filter: blur(10px);
+          }
+
+          .navbar-brand {
+               display: flex;
+               align-items: center;
+          }
+
+          .navbar-brand img {
+               height: 50px;
+               transition: all 0.4s ease;
+          }
+
+          .navbar.scrolled .navbar-brand img {
+               height: 40px;
+          }
+
+          .navbar-nav .nav-link {
+               font-weight: 600;
+               text-transform: uppercase;
+               color: var(--secondary);
+               margin: 0 8px;
+               position: relative;
+               transition: all 0.3s ease;
+               font-size: 0.9rem;
+               letter-spacing: 0.5px;
+          }
+
+          .navbar-nav .nav-link:hover {
+               color: var(--primary);
+          }
+
+          .navbar-nav .nav-link::after {
+               content: '';
+               position: absolute;
+               width: 0;
+               height: 2px;
+               bottom: 0;
+               left: 0;
+               background: var(--gradient);
+               transition: width 0.4s ease;
+          }
+
+          .navbar-nav .nav-link:hover::after {
+               width: 100%;
+          }
+
+          /* --- 3. Hero Banner (Matching the Image) --- */
+          .hero {
+               height: 50vh;
+               display: flex;
+               align-items: center;
+               color: white;
+               text-align: center;
+               position: relative;
+               overflow: hidden;
+          }
+
+
+          .hero-video {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               min-width: 100%;
+               min-height: 100%;
+               width: auto;
+               height: auto;
+               z-index: 1;
+               transform: translate(-50%, -50%);
+               object-fit: cover;
+               filter: contrast(1.5);
+          }
+
+          .hero::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: rgba(0, 0, 0, 0.51);
+               z-index: 2;
+          }
+
+          .hero-content {
+               position: relative;
+               text-align: center;
+               z-index: 3;
+          }
+
+          .hero-text h1 {
+               font-size: 120px;
+               font-weight: 900;
+               margin-top: 3.2rem;
+               text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+               background: linear-gradient(to right, #fff, #f8f9fa);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+          }
+
+          .hero-text span {
+               color: var(--primary);
+          }
+
+          /* --- 4. Main Content Section (Matching the Image) --- */
+          .content-section {
+               padding: 80px 0;
+               text-align: center;
+          }
+
+          .main-heading {
+               font-size: 3rem;
+               font-weight: 700;
+               margin-bottom: 20px;
+               color: var(--secondary);
+          }
+
+          .main-heading span {
+               color: var(--primary);
+          }
+
+          .content-text {
+               max-width: 900px;
+               margin: 0 auto 40px;
+               font-size: 1.1rem;
+               color: #495057;
+               line-height: 1.8;
+          }
+
+          .btn-primary {
+               background: var(--gradient);
+               border: none;
+               padding: 14px 35px;
+               font-weight: 600;
+               border-radius: 50px;
+               transition: all 0.4s ease;
+               box-shadow: 0 10px 20px rgba(248, 65, 32, 0.3);
+               position: relative;
+               overflow: hidden;
+               z-index: 1;
+          }
+
+          .btn-secondary {
+               background: var(--primary);
+               border: none;
+               padding: 14px 35px;
+               font-weight: 600;
+               border-radius: 50px;
+               transition: all 0.4s ease;
+               box-shadow: 0 10px 20px rgba(248, 65, 32, 0.3);
+               position: relative;
+               overflow: hidden;
+               z-index: 1;
+          }
+
+          .btn-secondary::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 0%;
+               height: 100%;
+               background: var(--gradient-dark);
+               transition: all 0.4s ease;
+               z-index: -1;
+          }
+
+          .btn-primary::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 0%;
+               height: 100%;
+               background: var(--gradient-dark);
+               transition: all 0.4s ease;
+               z-index: -1;
+          }
+
+          .btn-primary:hover::before {
+               width: 100%;
+          }
+
+          .btn-secondary:hover::before {
+               width: 100%;
+          }
+
+          .btn-secondary:hover {
+               transform: translateY(-5px);
+               box-shadow: 0 15px 25px rgba(248, 65, 32, 0.4);
+          }
+
+          .btn-primary:hover {
+               transform: translateY(-5px);
+               box-shadow: 0 15px 25px rgba(248, 65, 32, 0.4);
+          }
+
+          /* Box-container */
+          .container-box {
+               max-width: 1200px;
+               margin: 3rem auto;
+               background: 1px solid red;
+          }
+
+          .orange-box {
+               background-color: #f84120 !important;
+               border-radius: 12px;
+               padding: 60px 40px;
+               color: white;
+               text-align: center;
+               box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+               position: relative;
+               overflow: hidden;
+          }
+
+          .content {
+               position: relative;
+               z-index: 1;
+               max-width: 1000px;
+               margin: 0 auto;
+          }
+
+          .content h2 {
+               font-size: 2.5rem;
+               margin-bottom: 20px;
+               font-weight: 700;
+               line-height: 1.2;
+          }
+
+          .content p {
+               font-size: 1.2rem;
+               margin-bottom: 30px;
+               padding: 0 120px;
+               opacity: 0.95;
+               line-height: 1.6;
+          }
+
+          /* Animation classes for custom animations */
+          .wpb_column {
+               opacity: 0;
+               transform: translateY(65px) scale(0.85) rotateX(-35deg);
+               transform-origin: 50% 50%;
+          }
+
+          .wpb_column.animated {
+               opacity: 1;
+               transform: translateY(0) scale(1) rotateX(0);
+               transition: all 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          }
+
+
+          /* Section */
+          .section-title {
+               font-size: 2.8rem;
+               font-weight: 700;
+               margin-bottom: 3rem;
+               position: relative;
+               color: var(--secondary);
+          }
+
+          .section-title::after {
+               content: '';
+               position: absolute;
+               width: 80px;
+               height: 5px;
+               background: var(--gradient);
+               bottom: -15px;
+               left: 0;
+               border-radius: 10px;
+          }
+
+          .section-title.center::after {
+               left: 50%;
+               transform: translateX(-50%);
+          }
+
+          section {
+               padding: 60px 0;
+               position: relative;
+          }
+
+          .feature-list {
+               list-style: none;
+               margin: 25px 0;
+          }
+
+          .feature-list li {
+               margin-bottom: 12px;
+               padding-left: 30px;
+               position: relative;
+          }
+
+          .feature-list li:before {
+               content: '\f00c';
+               font-family: 'Font Awesome 5 Free';
+               font-weight: 900;
+               position: absolute;
+               left: 0;
+               top: 2px;
+               color: var(--primary);
+          }
+
+          /* Footer */
+          footer {
+               background: var(--gradient-dark);
+               color: white;
+               padding: 100px 0 30px;
+          }
+
+          footer::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,0 Q250,80 500,0 T1000,0 L1000,100 L0,100 Z" fill="white" opacity="0.03"/></svg>');
+               background-size: cover;
+          }
+
+          .footer-logo {
+               height: 7rem;
+               margin-bottom: 25px;
+          }
+
+          .footer-heading {
+               font-size: 1.2rem;
+               font-weight: 600;
+               margin-bottom: 25px;
+               position: relative;
+               padding-bottom: 10px;
+               color: var(--white);
+          }
+
+          .footer-heading::after {
+               content: '';
+               position: absolute;
+               width: 50px;
+               height: 3px;
+               background: var(--primary);
+               bottom: 0;
+               left: 0;
+               border-radius: 10px;
+          }
+
+          .footer-links {
+               list-style: none;
+               padding: 0;
+          }
+
+          .footer-links li {
+               margin-bottom: 12px;
+          }
+
+          .footer-links a {
+               color: rgba(255, 255, 255, 0.7);
+               text-decoration: none;
+               transition: all 0.3s ease;
+               display: inline-block;
+               padding: 5px 10px;
+               border-radius: 4px;
+          }
+
+          .footer-links a:hover {
+               color: var(--white);
+          }
+
+          .social-icons a {
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               width: 40px;
+               height: 40px;
+               text-align: center;
+               text-decoration: none;
+               background-color: rgba(255, 255, 255, 0.1);
+               border-radius: 50%;
+               margin-right: 10px;
+               color: white;
+               transition: all 0.3s ease;
+          }
+
+          .social-icons a:hover {
+               background-color: var(--primary);
+               transform: translateY(-5px);
+          }
+
+          .social-icons a i {
+               line-height: 1;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+          }
+
+          .copyright {
+               border-top: 1px solid rgba(255, 255, 255, 0.1);
+               padding-top: 25px;
+               margin-top: 70px;
+               text-align: center;
+               color: rgba(255, 255, 255, 0.6);
+          }
+
+          /* Newsletter Form Fix */
+          .newsletter-form .input-group {
+               display: flex;
+               flex-wrap: nowrap;
+          }
+
+          .newsletter-form .form-control {
+               border-top-right-radius: 0;
+               border-bottom-right-radius: 0;
+               margin-bottom: 0;
+               flex: 1;
+          }
+
+          .newsletter-form .btn {
+               border-top-left-radius: 0;
+               border-bottom-left-radius: 0;
+               white-space: nowrap;
+          }
+
+          /* Animation classes */
+          .fade-in {
+               opacity: 0;
+               transform: translateY(30px);
+               transition: all 0.6s ease;
+          }
+
+          .fade-in.visible {
+               opacity: 1;
+               transform: translateY(0);
+          }
+
+          /* ===== RESPONSIVE BREAKPOINTS ===== */
+
+          /* Mobile devices (320px - 480px) */
+          @media (max-width: 480px) {
+               .navbar-brand img {
+                    height: 35px;
+               }
+
+               .hero {
+                    height: 50vh;
+               }
+
+               .hero h1 {
+                    font-size: 1.8rem;
+                    margin-top: 2rem;
+               }
+
+               .main-heading {
+                    font-size: 1.6rem;
+               }
+
+               .content-section {
+                    padding: 60px 0;
+               }
+
+               .content-text {
+                    font-size: 0.9rem;
+                    margin-bottom: 30px;
+               }
+
+
+               footer {
+                    padding: 60px 0 20px;
+               }
+
+               .footer-logo {
+                    height: 5rem;
+               }
+
+               .footer-heading {
+                    font-size: 1.1rem;
+               }
+
+               .newsletter-form .input-group {
+                    flex-direction: column;
+               }
+
+               .newsletter-form .form-control {
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+               }
+
+               .newsletter-form .btn {
+                    border-radius: 10px;
+                    width: 100%;
+               }
+          }
+
+          /* Responsive Adjustments (UPDATED) */
+          /* Desktops, large screens (max-width: 1200px) */
+          /* Range: 1025px – 1200px */
+          @media (max-width: 1200px) {
+               .container {
+                    /* Changed from fixed 1230px to 100% for proper responsiveness */
+                    width: 100% !important;
+                    padding-left: var(--bs-gutter-x, 0.75rem);
+                    padding-right: var(--bs-gutter-x, 0.75rem);
+               }
+
+               .hero h1 {
+                    font-size: 3.2rem;
+               }
+          }
+
+          /* Small screens, laptops (max-width: 1024px) */
+          /* Range: 769px – 1024px */
+          @media (max-width: 1024px) {
+               .hero h1 {
+                    font-size: 2.8rem;
+               }
+
+               .about-content {
+                    flex-direction: column;
+               }
+
+               .about-text {
+                    padding-right: 0;
+                    margin-bottom: 40px;
+               }
+
+               .section-title {
+                    font-size: 2.4rem;
+               }
+
+               .footer-heading::after {
+                    left: 50%;
+                    transform: translateX(-50%);
+               }
+
+               .footer-logo {
+                    margin-bottom: 20px;
+               }
+
+               .footer-links,
+               .social-icons {
+                    text-align: center;
+               }
+
+               .col-lg-4,
+               .col-lg-2,
+               .col-lg-3 {
+                    text-align: center !important;
+               }
+
+               .cesta-letter {
+                    font-family: 'Russo One', sans-serif !important;
+                    font-size: 10rem;
+               }
+          }
+
+          /* iPads, Tablets (max-width: 768px) */
+          /* Range: 481px – 768px */
+          @media (max-width: 768px) {
+               .hero h1 {
+                    font-size: 2.4rem;
+               }
+
+               .hero p {
+                    font-size: 1.1rem;
+               }
+
+               .banner h2 {
+                    font-size: 2rem;
+               }
+
+               .section-title {
+                    font-size: 2rem;
+               }
+
+               section {
+                    padding: 80px 0;
+               }
+
+               .contact-form {
+                    padding: 30px;
+               }
+
+               .cesta-column {
+                    min-height: auto;
+                    margin-bottom: 40px;
+               }
+
+          }
+
+          /* Mobile devices (max-width: 480px) */
+          /* Range: 320px – 480px */
+          @media (max-width: 480px) {
+               .navbar-brand img {
+                    height: 40px;
+               }
+
+               .hero h1 {
+                    font-size: 2rem;
+               }
+
+               .hero p {
+                    font-size: 1rem;
+               }
+
+               .banner h2 {
+                    font-size: 1.6rem;
+               }
+
+               .section-title {
+                    font-size: 1.8rem;
+               }
+
+               .hero-logo {
+                    max-width: 220px;
+               }
+
+               .newsletter-form .input-group {
+                    flex-direction: column;
+               }
+
+               .newsletter-form .form-control {
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+               }
+
+               .newsletter-form .btn {
+                    border-radius: 10px;
+                    width: 100%;
+               }
+
+               .why-us-cesta-heading h2 {
+                    font-size: 2.5rem;
+               }
+
+               .cesta-letter {
+                    font-family: 'Russo One', sans-serif !important;
+                    font-size: 8rem;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+          <div class="container">
+               <a class="navbar-brand" href="#">
+                    <img src="./cestasoft-logo-tagline.png" alt="Cestasoft Logo">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                         <li class="nav-item">
+                              <a class="nav-link" href="./index1.html">HOME</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#about">WHO WE ARE</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="./services.html">WHAT WE DO</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#products">PRODUCTS</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#learning">LEARNING & DEVELOPMENT</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#resources">RESOURCES</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#contact">CONTACT</a>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+     </nav>
+
+     <section class="hero">
+          <div class="video-container">
+               <!-- Optimized video with multiple formats -->
+               <video autoplay muted loop playsinline preload="metadata" class="hero-video"
+                    poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxYTJhNmMiLz48L3N2Zz4=">
+                    <!-- WebM format (better compression) -->
+                    <source
+                         src="https://webdevdemo.co.za/cestasoft/wp-content/uploads/2025/05/4692423_Artificial-Intelligence_Programming_1920x1080.webm"
+                         type="video/webm">
+                    <!-- Fallback to MP4 -->
+                    <source
+                         src="https://webdevdemo.co.za/cestasoft/wp-content/uploads/2025/05/4692423_Artificial-Intelligence_Programming_1920x1080.mp4"
+                         type="video/mp4">
+                    Your browser does not support the video tag.
+               </video>
+
+               <!-- Loading overlay -->
+               <div class="video-loading">Loading...</div>
+          </div>
+
+          <div class="container">
+               <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                         <div class="hero-content">
+                              <h1 class="hero-text fade-in">What We <span>Do</span></h1>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <section class="content-section">
+          <div class="container">
+               <h2 class="main-heading fade-in">Digital <span>Solutions</span></h2>
+               <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                         <p class="content-text fade-in">Digital transformation is taking the globe by storm. End Users
+                              are continuously expecting more from software applications and websites alike. Companies
+                              are constantly needing to improve their digital awareness and quality of services and
+                              products to meet the changing landscape and demands of end users. Software quality is an
+                              important part of ensuring that products and services delivered to the market are of the
+                              highest quality. Cestasoft is a leading Software quality services provider focusing
+                              primarily on Quality assurance, Quality Engineering and Test Advisory.</p>
+                         <a href="index.html#contact" class="btn btn-primary fade-in">READ MORE <i
+                                   class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <section class="zigzag-section">
+          <div class="container">
+               <h2 class="section-title center text-center fade-in">Software <span class="primary-color">Quality</span>
+               </h2>
+               <div class="row about-content">
+                    <div class="col-lg-6 about-text fade-in">
+
+                         <p>Our software testing & quality assurance services are backed by a strong legacy of testing
+                              expertise and endorsed for its wide range of testing services spectrum.</p>
+                         <p>We deliver top class QA & testing services. We have adopted industry standard software
+                              testing
+                              models and techniques which help us deliver successful solutions with no risk.</p>
+
+                         <ul class="feature-list">
+                              <li>Test Automation</li>
+                              <li>Regression Testing</li>
+                              <li>Performance Testing</li>
+                              <li>Mobile Testing</li>
+                              <li>Functional Testing</li>
+                         </ul>
+
+                         <a href="#" class="btn btn-primary">Contact us</a>
+                    </div>
+                    <div class="col-lg-6 fade-in">
+                         <div class="about-img">
+                              <img src="./QA.png" alt="Cestasoft Team" class="img-fluid rounded">
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+
+     </section>
+
+     <section id="about">
+          <div class="container">
+               <h2 class="section-title center text-center fade-in">Software <span
+                         class="primary-color">Engineering</span></h2>
+               <div class="row about-content">
+                    <div class="col-lg-6  fade-in">
+                         <div class="about-img">
+                              <img src="./softwareEngineering.png" alt="Cestasoft Team" class="img-fluid rounded">
+                         </div>
+                    </div>
+                    <div class="col-lg-6 about-text mt-4 fade-in">
+                         <p>Cestasoft drives digital transformation in enterprises by integrating new technologies,
+                              revamping business
+                              strategies and helping them cope with the cultural shifts of modern-day customer
+                              requirements.</p>
+                         <p>The ever-changing technology landscape creates a unique benefit for every industry. At
+                              Cestasoft we create turnkey solutions for organizations through our core engineering
+                              services. Backed by an experienced and skilled team of software engineering experts, our
+                              teams will help you transform your organization.</p>
+                         <p>Core Engineering Services include, Bespoke Custom Development, Modern Delivery Solutions and
+                              Enterprise Data Solutions.</p>
+                         <!-- <a href="#contact" class="btn btn-primary">Learn More About Us</a> -->
+
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <section class="zigzag-section">
+          <div class="container">
+               <h2 class="section-title center text-center fade-in">Enterprise Applications <span
+                         class="primary-color">Services</span>
+               </h2>
+               <div class="row about-content">
+                    <div class="col-lg-6 about-text mt-4 fade-in">
+
+                         <p>“Enterprise Applications” are an essential cornerstone of any successful organization,
+                              providing businesses
+                              with the tools to connect their systems in order to reduce operational costs and maximize
+                              operational
+                              efficiency.</p>
+                         <p>By creating a comprehensive, integrated platform for all operations within the enterprise
+                              environment, businesses are able minimize downtime, improve performance, and reduce costs.
+                         </p>
+
+                         <p>Are you ready to transform your business in this digital economy? Cestasoft can help you
+                              modernize your business with industry leading ERP’s like SAP, Salesforce and Oracle.</p>
+
+                         <!-- <a href="#" class="btn btn-primary">Contact us</a> -->
+                    </div>
+                    <div class="col-lg-6 fade-in">
+                         <div class="about-img">
+                              <img src="./enterprise.png" alt="Cestasoft Team" class="img-fluid rounded">
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+     </section>
+
+     <section id="about">
+          <div class="container">
+               <h2 class="section-title center text-center fade-in">Specialist <span
+                         class="primary-color">Consulting</span></h2>
+               <div class="row about-content">
+                    <div class="col-lg-6  fade-in">
+                         <div class="about-img">
+                              <img src="./specialist.png" alt="Cestasoft Team" class="img-fluid rounded">
+                         </div>
+                    </div>
+                    <div class="col-lg-6 about-text mt-4 fade-in">
+                         <p>At Cestasoft, we strive to be savvy problem-solvers and “Exceptional Experts”. Our
+                              consultants come equipped
+                              with extensive knowledge, experience and capabilities in all areas of the software
+                              development lifecycle.</p>
+                         <p>Our global footprint and broad industry sector experience enables us to effortlessly join
+                              you in your project or product journey.</p>
+                         <p>If you’re assembling your perfect team or in search of niche skills, then look no further!
+                         </p>
+                         <!-- <a href="#contact" class="btn btn-primary">Learn More About Us</a> -->
+
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <section class="zigzag-section">
+          <div class="container">
+               <h2 class="section-title center text-center fade-in">Cyber <span class="primary-color">Security</span>
+               </h2>
+               <div class="row about-content">
+                    <div class="col-lg-6 about-text mt-4 fade-in">
+
+                         <p>We are in midst of a silent and anonymous war, which WAR is more pervasive as the attacks
+                              become more
+                              prevalent and has the potential to touch every person, whether as civilian, business
+                              entity or nation state.</p>
+                         <p>CestaCyber offers the following services
+                         </p>
+
+                         <p>Are you ready to transform your business in this digital economy? Cestasoft can help you
+                              modernize your business with industry leading ERP’s like SAP, Salesforce and Oracle.</p>
+
+                         <ul class="feature-list">
+                              <li>Digital Forensics</li>
+                              <li>Environment and Application Breach Testing</li>
+                              <li>Digital Footprint Analysis</li>
+                              <li>Auditing</li>
+                              <li>Cyber Security Orientated Learnership and Training</li>
+                         </ul>
+
+                         <!-- <a href="#" class="btn btn-primary">Contact us</a> -->
+                    </div>
+                    <div class="col-lg-6 fade-in">
+                         <div class="about-img">
+                              <img src="./cyberSecurity.png" alt="Cestasoft Team" class="img-fluid rounded">
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+     </section>
+
+     <section class="features">
+          <div class="container container-box">
+               <div class="orange-box">
+                    <div class="content">
+                         <h2>Take Your Business To The Next Level With Our Innovative IT Services And Solutions</h2>
+                         <p>At CestaSoft, we combine deep industry insight with cutting-edge innovation to deliver
+                              transformative digital solutions. Let's work together to create innovative, secure, and
+                              scalable digital solutions tailored to your goals.</p>
+                         <a href="#" class="btn btn-secondary fade-in">CONTACT US →</a>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <footer>
+          <div class="container">
+               <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                         <img src="./experience-innovation-cestasoft-200x106.png" alt="Cestasoft Logo"
+                              class="footer-logo">
+                         <p class="color: var(--footer-text);">Experience innovation with Cestasoft, your strategic
+                              partner for digital transformation and cutting-edge IT solutions.</p>
+                         <div class="social-icons">
+                              <a href="#"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                         </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                         <h5 class="footer-heading">Quick Links</h5>
+                         <ul class="footer-links">
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="index.html#about">About Us</a></li>
+                              <li><a href="what-we-do.html">What We Do</a></li>
+                              <li><a href="index.html#products">Products</a></li>
+                              <li><a href="index.html#contact">Contact</a></li>
+                         </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                         <h5 class="footer-heading">Our Services</h5>
+                         <ul class="footer-links">
+                              <li><a href="#">Software Development</a></li>
+                              <li><a href="#">Cloud Solutions</a></li>
+                              <li><a href="#">AI & ML</a></li>
+                              <li><a href="#">Cybersecurity</a></li>
+                              <li><a href="#">Data Analytics</a></li>
+                         </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                         <h5 class="footer-heading">Newsletter</h5>
+                         <p class="color: var(--footer-text);">Subscribe to our newsletter for the latest updates.</p>
+                         <form class="newsletter-form">
+                              <div class="input-group">
+                                   <input type="email" class="form-control" placeholder="Your Email"
+                                        aria-label="Recipient's email" required>
+                                   <button class="btn btn-primary" type="submit">Subscribe</button>
+                              </div>
+                         </form>
+                    </div>
+               </div>
+               <div class="copyright">
+                    &copy; 2025 Cestasoft. All Rights Reserved.
+               </div>
+          </div>
+     </footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script>
+          // Navbar scroll effect
+          window.addEventListener('scroll', function () {
+               const navbar = document.querySelector('.navbar');
+               if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+               } else {
+                    navbar.classList.remove('scrolled');
+               }
+          });
+
+          // // Set active nav link
+          // document.addEventListener('DOMContentLoaded', function () {
+          //      const currentPage = window.location.pathname.split('/').pop();
+          //      const navLinks = document.querySelectorAll('.nav-link');
+
+          //      navLinks.forEach(link => {
+          //           if (link.getAttribute('href') === currentPage) {
+          //                link.classList.add('active');
+          //           } else {
+          //                link.classList.remove('active');
+          //           }
+          //      });
+          // });
+
+          // Intersection Observer for fade-in effect
+          const fadeInElements = document.querySelectorAll('.fade-in');
+
+          const observerOptions = {
+               root: null,
+               rootMargin: '0px',
+               threshold: 0.1 // Trigger when 10% of the element is visible
+          };
+
+          const observer = new IntersectionObserver((entries, observer) => {
+               entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                         entry.target.classList.add('visible');
+                         observer.unobserve(entry.target); // Stop observing once visible
+                    }
+               });
+          }, observerOptions);
+
+          fadeInElements.forEach(element => {
+               observer.observe(element);
+          });
+
+          // Custom animation for the new section
+          const animatedSection = document.querySelector('.animated-section');
+          const wpbColumns = document.querySelectorAll('.wpb_column');
+
+          const animationObserver = new IntersectionObserver((entries) => {
+               entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                         wpbColumns.forEach((column, index) => {
+                              setTimeout(() => {
+                                   column.classList.add('animated');
+                              }, index * 200); // Stagger the animations
+                         });
+                    }
+               });
+          }, {
+               threshold: 0.2
+          });
+
+          if (animatedSection) {
+               animationObserver.observe(animatedSection);
+          }
+
+          // Simple script for smooth scrolling
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+               anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                         behavior: 'smooth'
+                    });
+               });
+          });
+     </script>
+</body>
+
+</html>
