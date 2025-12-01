@@ -15,51 +15,75 @@
 <body>
      <!-- Header -->
      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-          <div class="container">
-               <a class="navbar-brand" href="#">
-                    <img src="./images/cestasoft-logo-tagline.png" alt="Cestasoft Logo">
-               </a>
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                         <li class="nav-item">
-                              <a class="nav-link" href="./index1.html">HOME</a>
-                         </li>
-                         <li class="nav-item">
-                              <a class="nav-link" href="#about">WHO WE ARE</a>
-                         </li>
-                         <li class="nav-item dropdown">
-                              <a class="nav-link" href="./services.html">WHAT WE DO</a>
-                              <a class="nav-link dropdown-toggle dropdown-toggle-arrow" href="#" id="whatWeDoDropdown"
-                                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                   <i class="fas fa-chevron-down"></i>
-                              </a>
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/cestasoft-logo-tagline.png" alt="Cestasoft Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index1.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./who-we-are.html">WHO WE ARE</a>
+                    </li>
+                    <li class="nav-item dropdown what-we-do">
+                        <div class="d-flex align-items-center">
+                            <a class="nav-link main-link" href="./services.html">
+                                WHAT WE DO
+                            </a>
+
+                            <a class="nav-link dropdown-toggle toggle-icon" href="#" id="whatWeDoDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <!-- <i class="fas fa-chevron-down"></i> -->
+                            </a>
+                        </div>
+
+                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                            <li><a class="dropdown-item" href="./software-quality.html">Software Quality</a></li>
+                            <li><a class="dropdown-item" href="#">Software Engineering</a></li>
+                            <li><a class="dropdown-item" href="#">Enterprise Application</a></li>
+                            <li><a class="dropdown-item" href="#">Specialist Consulting</a></li>
+                            <li><a class="dropdown-item" href="#">Cyber Security</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">PRODUCTS</a>
+                    </li>
+                     <li class="nav-item dropdown what-we-do">
+                              <div class="d-flex align-items-center">
+                                   <a class="nav-link main-link" href="#learning">
+                                        LEARNING & DEVELOPMENT
+                                   </a>
+
+                                   <a class="nav-link dropdown-toggle toggle-icon" href="#" id="whatWeDoDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <!-- <i class="fas fa-chevron-down"></i> -->
+                                   </a>
+                              </div>
+
                               <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
-                                   <li><a class="dropdown-item" href="./software-quality.html">Software Quality</a></li>
-                                   <li><a class="dropdown-item" href="#">Software Engineering</a></li>
-                                   <li><a class="dropdown-item" href="#">Enterprise Application</a></li>
+                                   <li><a class="dropdown-item" href="./software-quality.html">ACADEMY</a></li>
+                                   <li><a class="dropdown-item" href="#">CAREERS</a></li>
+                                   <!-- <li><a class="dropdown-item" href="#">Enterprise Application</a></li>
                                    <li><a class="dropdown-item" href="#">Specialist Consulting</a></li>
-                                   <li><a class="dropdown-item" href="#">Cyber Security</a></li>
+                                   <li><a class="dropdown-item" href="#">Cyber Security</a></li> -->
                               </ul>
                          </li>
-                         <li class="nav-item">
-                              <a class="nav-link" href="#products">PRODUCTS</a>
-                         </li>
-                         <li class="nav-item">
-                              <a class="nav-link" href="#learning">LEARNING & DEVELOPMENT</a>
-                         </li>
-                         <li class="nav-item">
-                              <a class="nav-link" href="#resources">RESOURCES</a>
-                         </li>
-                         <li class="nav-item">
-                              <a class="nav-link" href="#">CONTACT</a>
-                         </li>
-                    </ul>
-               </div>
-          </div>
-     </nav>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">RESOURCES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
      <!-- Hero section -->
      <section class="hero-section">

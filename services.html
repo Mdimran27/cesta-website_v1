@@ -59,6 +59,15 @@
                transition: all 0.4s ease;
           }
 
+          /* .navbar-nav {
+               white-space: nowrap;
+          }
+
+          .navbar-nav .nav-item {
+               display: flex;
+               align-items: center;
+          } */
+
           .navbar.scrolled {
                padding: 10px 0;
                background-color: rgba(255, 255, 255, 0.98);
@@ -88,6 +97,7 @@
                transition: all 0.3s ease;
                font-size: 0.9rem;
                letter-spacing: 0.5px;
+               /* white-space: nowrap; */
           }
 
           .navbar-nav .nav-link:hover {
@@ -108,6 +118,41 @@
           .navbar-nav .nav-link:hover::after {
                width: 100%;
           }
+
+          /* Enable hover dropdown */
+          .what-we-do:hover .dropdown-menu {
+               display: block;
+          }
+
+          .dropdown-item:hover {
+               background-color: var(--primary);
+               color: #fff !important;
+               transform: translateX(5px);
+          }
+
+          /* Make WHAT WE DO clickable while arrow opens dropdown */
+          .what-we-do .main-link {
+               padding-right: 2px;
+          }
+
+          .what-we-do .toggle-icon {
+               padding-left: 0;
+               margin-left: -5px;
+               cursor: pointer;
+               opacity: 0;
+          }
+
+          /* Rotate arrow on hover */
+          .what-we-do:hover .toggle-icon i {
+               transform: rotate(180deg);
+               transition: 0.3s ease;
+          }
+
+          /* .what-we-do>.d-flex {
+               display: flex;
+               align-items: center;
+               gap: 2px;
+          } */
 
           /* --- 3. Hero Banner (Matching the Image) --- */
           .hero {
@@ -339,7 +384,7 @@
           }
 
           section {
-               padding: 60px 0;
+               padding: 30px 0;
                position: relative;
           }
 
@@ -717,14 +762,20 @@
                               <a class="nav-link" href="./index1.html">HOME</a>
                          </li>
                          <li class="nav-item">
-                              <a class="nav-link" href="#about">WHO WE ARE</a>
+                              <a class="nav-link" href="./who-we-are.html">WHO WE ARE</a>
                          </li>
-                         <li class="nav-item dropdown">
-                              <a class="nav-link" href="./services.html">WHAT WE DO</a>
-                              <a class="nav-link dropdown-toggle dropdown-toggle-arrow" href="#" id="whatWeDoDropdown"
-                                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                   <i class="fas fa-chevron-down"></i>
-                              </a>
+                         <li class="nav-item dropdown what-we-do">
+                              <div class="d-flex align-items-center">
+                                   <a class="nav-link main-link" href="./services.html">
+                                        WHAT WE DO
+                                   </a>
+
+                                   <a class="nav-link dropdown-toggle toggle-icon" href="#" id="whatWeDoDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <!-- <i class="fas fa-chevron-down"></i> -->
+                                   </a>
+                              </div>
+
                               <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
                                    <li><a class="dropdown-item" href="./software-quality.html">Software Quality</a></li>
                                    <li><a class="dropdown-item" href="#">Software Engineering</a></li>
@@ -733,11 +784,32 @@
                                    <li><a class="dropdown-item" href="#">Cyber Security</a></li>
                               </ul>
                          </li>
+
                          <li class="nav-item">
-                              <a class="nav-link" href="#products">PRODUCTS</a>
+                              <a class="nav-link" href="./products.html">PRODUCTS</a>
                          </li>
-                         <li class="nav-item">
+                         <!-- <li class="nav-item">
                               <a class="nav-link" href="#learning">LEARNING & DEVELOPMENT</a>
+                         </li> -->
+                         <li class="nav-item dropdown what-we-do">
+                              <div class="d-flex align-items-center">
+                                   <a class="nav-link main-link" href="#learning">
+                                        LEARNING & DEVELOPMENT
+                                   </a>
+
+                                   <a class="nav-link dropdown-toggle toggle-icon" href="#" id="whatWeDoDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <!-- <i class="fas fa-chevron-down"></i> -->
+                                   </a>
+                              </div>
+
+                              <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                                   <li><a class="dropdown-item" href="./software-quality.html">ACADEMY</a></li>
+                                   <li><a class="dropdown-item" href="#">CAREERS</a></li>
+                                   <!-- <li><a class="dropdown-item" href="#">Enterprise Application</a></li>
+                                   <li><a class="dropdown-item" href="#">Specialist Consulting</a></li>
+                                   <li><a class="dropdown-item" href="#">Cyber Security</a></li> -->
+                              </ul>
                          </li>
                          <li class="nav-item">
                               <a class="nav-link" href="#resources">RESOURCES</a>
