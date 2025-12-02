@@ -5,6 +5,7 @@
   --accent: #3498db;
   --light: #f8f9fa;
   --dark: #212529;
+  --black: #000000;
   --footer-text: #bdc3c7;
   --gradient: linear-gradient(135deg, #f84120 0%, #ff6b4a 100%);
   --gradient-dark: linear-gradient(135deg, #1a2b4c 0%, #2c3e50 100%);
@@ -674,7 +675,7 @@ section:nth-child(even) {
 }
 
 /* WHO ARE WE */
-.Cards-grid{
+.Cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   gap: 30px;
@@ -769,9 +770,9 @@ section:nth-child(even) {
 
 /* Footer */
 footer {
-  background: var(--gradient-dark);
+  background: var(--black);
   color: white;
-  padding: 100px 0 30px;
+  padding: 70px 0 30px;
 }
 
 .contact-intro {
@@ -901,6 +902,83 @@ footer {
   box-shadow: 0 10px 20px rgba(248, 65, 32, 0.3);
 }
 
+/* New Footer */
+footer {
+    background: #000000;
+    padding: 60px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.container_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-logo {
+    width: 180px;
+    height: auto;
+}
+
+/* ---- Social Icons ---- */
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    background: #f4451f;    /* orange buttons like screenshot */
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* ---- Footer Links ---- */
+.col-12 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+
+.col-12 ul li {
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.col-12 ul li:hover {
+    color: #f4451f;
+}
+
+/* ---- Copyright ---- */
+.footer-copyright {
+    margin-top: 20px;
+    /* font-size: 13px; */
+    color: #cccccc;
+}
+
+
 /* PRODUCTS PAGE */
 .container-box {
   max-width: 1200px;
@@ -926,7 +1004,7 @@ footer {
   margin: 0 auto;
 }
 
-.content-header{
+.content-header {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
@@ -946,7 +1024,7 @@ footer {
   line-height: 1.6;
 }
 
-.content-header{
+.content-header {
   font-family: "Russo One", sans-serif !important;
   font-size: 44px;
   letter-spacing: 2px;
@@ -1048,7 +1126,7 @@ footer {
   opacity: 1;
   transform: translate(0px, -30px);
 }
-.content-box > div:hover  h3 {
+.content-box > div:hover h3 {
   filter: grayscale(0);
   opacity: 1;
   transform: translate(0px, -30px);
