@@ -234,12 +234,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Normalize paths for comparison
     href = href.split("/").pop();
-
+// console.log(href)
+      console.log(currentPath)
     if (href === currentPath) {
+      
+      console.log(href === currentPath)
       link.classList.add("active");
 
       // If it's inside a dropdown, highlight the parent
-      const dropdownParent = link.closest(".what-we-do");
+      const dropdownParent = link.closest(".services");
       if (dropdownParent) {
         const parentLink = dropdownParent.querySelector(".main-link");
         if (parentLink) parentLink.classList.add("active");

@@ -30,7 +30,7 @@
           }
 
           body {
-               font-family: 'Open Sans', sans-serif;
+               font-family: "Montserrat", Arial, Helvetica, sans-serif;
                line-height: 1.7;
                color: var(--dark);
                overflow-x: hidden;
@@ -49,6 +49,14 @@
 
           .primary-color {
                color: var(--primary);
+          }
+
+          .active-page {
+               color: var(--primary) !important;
+          }
+
+          .active-page::after {
+               width: 100% !important;
           }
 
           /* Header */
@@ -89,14 +97,15 @@
           }
 
           .navbar-nav .nav-link {
-               font-weight: 600;
+               font-weight: 380;
                text-transform: uppercase;
                color: var(--secondary);
-               margin: 0 8px;
+               /* margin: 0 8px; */
                position: relative;
                transition: all 0.3s ease;
-               font-size: 0.9rem;
-               letter-spacing: 0.5px;
+               font-size: 14px;
+               letter-spacing: 2px;
+               font-family: "Montserrat", Arial, Helvetica, sans-serif;
                /* white-space: nowrap; */
           }
 
@@ -104,7 +113,7 @@
                color: var(--primary);
           }
 
-          .navbar-nav .nav-link::after {
+          /* .navbar-nav .nav-link::after {
                content: '';
                position: absolute;
                width: 0;
@@ -113,22 +122,32 @@
                left: 0;
                background: var(--gradient);
                transition: width 0.4s ease;
-          }
+          } */
 
           .navbar-nav .nav-link:hover::after {
                width: 100%;
           }
 
+          .nav-link.active {
+               color: #f84120 !important;
+               /* border-bottom: 3px solid #f84120 !important; */
+          }
+
+          .navbar-nav .nav-link:hover {
+               color: var(--primary);
+          }
+
           /* Enable hover dropdown */
           .what-we-do:hover .dropdown-menu {
                display: block;
+               text-transform: uppercase;
           }
 
-          .dropdown-item:hover {
+          /* .dropdown-item:hover {
                background-color: var(--primary);
                color: #fff !important;
                transform: translateX(5px);
-          }
+          } */
 
           /* Make WHAT WE DO clickable while arrow opens dropdown */
           .what-we-do .main-link {
@@ -140,12 +159,19 @@
                margin-left: -5px;
                cursor: pointer;
                opacity: 0;
+               display: none;
           }
 
           /* Rotate arrow on hover */
           .what-we-do:hover .toggle-icon i {
                transform: rotate(180deg);
                transition: 0.3s ease;
+          }
+
+          .dropdown-item:hover {
+               background-color: var(--primary);
+               color: #fff !important;
+               transform: translateX(5px);
           }
 
           /* .what-we-do>.d-flex {
@@ -771,7 +797,8 @@
                                    </a>
 
                                    <a class="nav-link dropdown-toggle toggle-icon" href="#" id="whatWeDoDropdown"
-                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                        style="display: none;">
                                         <!-- <i class="fas fa-chevron-down"></i> -->
                                    </a>
                               </div>
@@ -815,7 +842,7 @@
                               <a class="nav-link" href="#resources">RESOURCES</a>
                          </li>
                          <li class="nav-item">
-                              <a class="nav-link" href="#contact">CONTACT</a>
+                              <a class="nav-link" href="./contact.html">CONTACT</a>
                          </li>
                     </ul>
                </div>
@@ -828,9 +855,9 @@
                <video autoplay muted loop playsinline preload="metadata" class="hero-video"
                     poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxYTJhNmMiLz48L3N2Zz4=">
                     <!-- WebM format (better compression) -->
-                    <source
+                    <!-- <source
                          src="https://webdevdemo.co.za/cestasoft/wp-content/uploads/2025/05/4692423_Artificial-Intelligence_Programming_1920x1080.webm"
-                         type="video/webm">
+                         type="video/webm"> -->
                     <!-- Fallback to MP4 -->
                     <source
                          src="https://webdevdemo.co.za/cestasoft/wp-content/uploads/2025/05/4692423_Artificial-Intelligence_Programming_1920x1080.mp4"
@@ -893,7 +920,7 @@
                               <li>Functional Testing</li>
                          </ul>
 
-                         <a href="#" class="btn btn-primary">Contact us</a>
+                         <a href="./contact.html" class="btn btn-primary">Contact us</a>
                     </div>
                     <div class="col-lg-6 fade-in">
                          <div class="about-img">
@@ -1176,6 +1203,37 @@
                     });
                });
           });
+
+          document.addEventListener("DOMContentLoaded", function () {
+               const currentPath = window.location.pathname.split("/").pop() || "index.html";
+               const navLinks = document.querySelectorAll(".navbar .nav-link");
+
+               navLinks.forEach(link => {
+                    let href = link.getAttribute("href");
+
+                    // Ignore links that are just '#' anchors
+                    if (!href || href === "#") return;
+
+                    // Normalize paths for comparison
+                    href = href.split("/").pop();
+
+                    if (href === currentPath) {
+                         link.classList.add("active");
+
+                         // If it's inside a dropdown, highlight the parent
+                         const dropdownParent = link.closest(".services");
+                         if (dropdownParent) {
+                              const parentLink = dropdownParent.querySelector(".main-link");
+                              if (parentLink) parentLink.classList.add("active");
+                         }
+                    }
+
+                    // Special case: Home page
+                    if ((currentPath === "index.html" || currentPath === "") && link.textContent.trim().toUpperCase() === "HOME") {
+                         link.classList.add("active");
+                    }
+               });
+          })
      </script>
 </body>
 
