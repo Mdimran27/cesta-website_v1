@@ -106,7 +106,6 @@
 //   // }
 // });
 
-
 // document.addEventListener("DOMContentLoaded", function () {
 //   const currentPage = window.location.pathname.split("/").pop() || "index.html";
 //   const links = document.querySelectorAll(".nav-link");
@@ -133,13 +132,10 @@
 //   });
 // });
 
-
-
 // New script:
 
 // Wait for DOM to load
 document.addEventListener("DOMContentLoaded", function () {
-
   // 1️⃣ Navbar Scroll Effect
   const navbar = document.querySelector(".navbar");
   window.addEventListener("scroll", function () {
@@ -154,18 +150,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const fadeInElements = document.querySelectorAll(".fade-in");
   const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
   const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
-  fadeInElements.forEach(el => observer.observe(el));
+  fadeInElements.forEach((el) => observer.observe(el));
 
   // 3️⃣ Dropdown Navigation Handling
   const dropdowns = document.querySelectorAll(".what-we-do");
-  dropdowns.forEach(item => {
+  dropdowns.forEach((item) => {
     const mainLink = item.querySelector(".main-link");
     const toggle = item.querySelector(".toggle-icon");
 
@@ -210,10 +206,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // 4️⃣ Tabs (if present)
   const tabBtns = document.querySelectorAll(".tab-btn");
   const tabPanes = document.querySelectorAll(".tab-pane");
-  tabBtns.forEach(btn => {
+  tabBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
-      tabBtns.forEach(b => b.classList.remove("active"));
-      tabPanes.forEach(p => p.classList.remove("active"));
+      tabBtns.forEach((b) => b.classList.remove("active"));
+      tabPanes.forEach((p) => p.classList.remove("active"));
 
       this.classList.add("active");
       const tabId = this.getAttribute("data-tab");
@@ -226,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll(".navbar .nav-link");
 
-  navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     let href = link.getAttribute("href");
 
     // Ignore links that are just '#' anchors
@@ -234,11 +230,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Normalize paths for comparison
     href = href.split("/").pop();
-// console.log(href)
-      console.log(currentPath)
+    // console.log(href)
+    console.log(currentPath);
     if (href === currentPath) {
-      
-      console.log(href === currentPath)
+      console.log(href === currentPath);
       link.classList.add("active");
 
       // If it's inside a dropdown, highlight the parent
@@ -250,9 +245,55 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Special case: Home page
-    if ((currentPath === "index.html" || currentPath === "") && link.textContent.trim().toUpperCase() === "HOME") {
+    if (
+      (currentPath === "index.html" || currentPath === "") &&
+      link.textContent.trim().toUpperCase() === "HOME"
+    ) {
       link.classList.add("active");
     }
   });
 
+  const tabs = document.querySelectorAll(".tab");
+  const cards = document.querySelectorAll(".job-card");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      // Remove active from all
+      tabs.forEach((btn) => btn.classList.remove("active"));
+
+      // Add active tab
+      tab.classList.add("active");
+
+      const category = tab.dataset.tab;
+
+      cards.forEach((card) => {
+        if (category === "all") {
+          card.style.display = "block";
+        } else {
+          card.style.display =
+            card.dataset.category === category ? "block" : "none";
+        }
+      });
+    });
+  });
+
+  // Product Carousel
+  // let index = 0;
+  // function showSlide() {
+  //   const carousel = document.getElementById("carousel");
+  //   carousel.style.transform = `translateX(-${index * 100}%)`;
+  // }
+
+  // function nextSlide() {
+  //   index = (index + 1) % 3; // number of images
+  //   showSlide();
+  // }
+
+  // function prevSlide() {
+  //   index = (index - 1 + 3) % 3;
+  //   showSlide();
+  // }
+
+  // /* Auto-Slide Every 3 Seconds */
+  // setInterval(nextSlide, 3000);
 });
