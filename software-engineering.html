@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Quality Software services</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&family=Russo+One&display=swap"
+          rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+     <!-- Header -->
+     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+          <div class="container">
+               <a class="navbar-brand" href="#">
+                    <img src="./images/cestasoft-logo-tagline.png" alt="Cestasoft Logo">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                         <li class="nav-item">
+                              <a class="nav-link" href="./index1.html">HOME</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="./who-we-are.html">WHO WE ARE</a>
+                         </li>
+                         <li class="nav-item dropdown what-we-do">
+                              <div class="d-flex align-items-center">
+                                   <a class="nav-link main-link" href="./services.html">
+                                        WHAT WE DO
+                                   </a>
+
+                                   <a class="nav-link dropdown-toggle toggle-icon" href="#" id="whatWeDoDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <!-- <i class="fas fa-chevron-down"></i> -->
+                                   </a>
+                              </div>
+
+                              <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                                   <li><a class="dropdown-item" href="./software-quality.html">Software Quality</a></li>
+                                   <li><a class="dropdown-item" href="#">Software Engineering</a></li>
+                                   <li><a class="dropdown-item" href="#">Enterprise Application</a></li>
+                                   <li><a class="dropdown-item" href="#">Specialist Consulting</a></li>
+                                   <li><a class="dropdown-item" href="#">Cyber Security</a></li>
+                              </ul>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="./products.html">PRODUCTS</a>
+                         </li>
+                         <!-- <li class="nav-item">
+                        <a class="nav-link" href="#learning">LEARNING & DEVELOPMENT</a>
+                    </li> -->
+                         <li class="nav-item dropdown what-we-do">
+                              <div class="d-flex align-items-center">
+                                   <a class="nav-link main-link" href="#learning">
+                                        LEARNING & DEVELOPMENT
+                                   </a>
+
+                                   <a class="nav-link dropdown-toggle toggle-icon" href="#" id="whatWeDoDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <!-- <i class="fas fa-chevron-down"></i> -->
+                                   </a>
+                              </div>
+
+                              <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                                   <li><a class="dropdown-item" href="./academy.html">ACADEMY</a></li>
+                                   <li><a class="dropdown-item" href="./careers.html">CAREERS</a></li>
+                                   <!-- <li><a class="dropdown-item" href="#">Enterprise Application</a></li>
+                                   <li><a class="dropdown-item" href="#">Specialist Consulting</a></li>
+                                   <li><a class="dropdown-item" href="#">Cyber Security</a></li> -->
+                              </ul>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#resources">RESOURCES</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="./contact.html">CONTACT</a>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+     </nav>
+
+     <!-- Hero section -->
+     <section class="hero-section">
+          <video autoplay muted loop playsinline preload="metadata" class="hero-video"
+               poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxYTJhNmMiLz48L3N2Zz4=">
+               <!-- WebM format (better compression) -->
+               <!-- <source
+                         src="https://webdevdemo.co.za/cestasoft/wp-content/uploads/2025/05/4692423_Artificial-Intelligence_Programming_1920x1080.webm"
+                         type="video/webm"> -->
+               <!-- Fallback to MP4 -->
+               <source
+                    src="https://webdevdemo.co.za/cestasoft/wp-content/uploads/2025/05/4692423_Artificial-Intelligence_Programming_1920x1080.mp4"
+                    type="video/mp4">
+               Your browser does not support the video tag.
+          </video>
+
+          <div class="container">
+               <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                         <div class="hero-content">
+                              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAABkCAYAAADDhn8LAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAb0lEQVR4nO3QQQkAIBAEsQv/f9M9CEI7O8zcAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw1gO1RgMBML1b9wAAAABJRU5kJggg"
+                                   alt="Experience Innovation with Cestasoft" class="hero-logo">
+                              <h1 class="fade-in">
+                                   Software <span style="color: #f84120;">Engineering</span>
+                              </h1>
+
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Why Us -->
+     <section id="why-us-cesta">
+          <div class="container">
+               <div class="why-us-cesta-heading fade-in">
+                    <h2 class="section-title center text-center fade-in">Custom Software <span
+                              class="primary-color">Engineering</span></h2>
+               </div>
+               <p class="why-us-cesta-description fade-in">
+                    We help enterprises embrace digital transformation by modernizing systems, developing scalable
+                    software, and building custom technology solutions. Our engineering teams bring agility, innovation,
+                    and experience to every project.
+
+                    We are a software engineering solutions provider with a globally distributed team of engineers,
+                    designers, AI architects, and IT managers—united by a shared mission to deliver innovative products
+                    that exceed expectations in performance, design, and functionality
+               </p>
+
+          </div>
+     </section>
+
+     <!-- Tabs section -->
+     <div class="tabs-section">
+          <div class="tabs-container">
+               <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="bespoke">Bespoke Software Development</button>
+                    <button class="tab-btn" data-tab="digital">Digital Transformation Services</button>
+                    <button class="tab-btn" data-tab="enterprise">Enterprise Platforms & ERP Modernization</button>
+                    <button class="tab-btn" data-tab="technologies">Technologies We Work With</button>
+               </div>
+               <div class="tab-content">
+                    <div class="tab-pane active" id="bespoke">
+                         <h3 class="tab-title">Bespoke Software Development</h3>
+                         <p class="tab-description">
+                              When developing custom digital products from the ground up, we prioritize the features
+                              that drive your business goals. Our solutions are designed with scalability at their
+                              core—ensuring they evolve seamlessly as your user base grows and demands increase.
+                         </p>
+
+                         <div class="services-grid">
+                              <div class="service-item">
+                                   <h5 class="service-title">Web Application Development</h5>
+                                   <p class="service-text">
+                                        We specialize in designing and building web applications that are perfectly
+                                        aligned with your business goals. Whether you're launching a new product,
+                                        automating internal processes, or scaling an existing solution, we provide
+                                        secure, scalable, and high-performance applications tailored to your needs. From
+                                        ideation to deployment, our dedicated development team works alongside you,
+                                        ensuring seamless integration into your workflow.
+                                   </p>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">Back End Development</h5>
+                                   <p class="service-text">
+                                        In building web applications, our backend developers craft the engine that
+                                        powers your business logic. We define the flow of data between the server,
+                                        database, and user interface, designing secure and scalable systems that enhance
+                                        data processing, automation, and third-party integrations. Leveraging our cloud
+                                        app development expertise, we ensure these systems are optimized for maximum
+                                        scalability and performance.
+                                   </p>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">Mobile Application Development</h5>
+                                   <p class="service-text">
+                                        We offer cross-platform mobile app development services for iOS, Android, and
+                                        hybrid apps, focusing on creating user-friendly applications that boost
+                                        engagement and ensure optimal performance across all devices.
+                                   </p>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">End to End Product Development</h5>
+                                   <p class="service-text">
+                                        We provide end-to-end custom software development, managing every stage of the
+                                        product lifecycle—from concept to deployment. This comprehensive approach is
+                                        ideal for businesses seeking a trusted partner to handle design, development,
+                                        testing, and support.
+                                   </p>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">SaaS Application Development</h5>
+                                   <p class="service-text">
+                                        CestaSoft enables businesses to convert ideas into robust, scalable cloud
+                                        solutions. Our SaaS development services cover secure, multi-tenant
+                                        architectures that are configurable, maintainable, and ready to scale. With an
+                                        approach focused on efficiency and flexibility, we support sustainable growth
+                                        while minimizing infrastructure complexity and cost.
+                                   </p>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">Dedicated Team</h5>
+                                   <p class="service-text">
+                                        Our custom software development services provide you with a fully dedicated team
+                                        that works exclusively on your project. This approach is perfect for businesses
+                                        that require long-term collaboration, flexibility, and full control over the
+                                        development process, all without the need to hire or manage internal staff.
+                                   </p>
+                              </div>
+                         </div>
+
+                         <div class="highlight-box"
+                              style="background: var(--gradient-dark); color: var(--white); padding: 2rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
+                              <p style="font-size: 1.2rem; font-weight: 600; margin: 0;">
+                                   CestaSoft delivers intelligent, agile software solutions that solve real-world
+                                   business problems.
+                              </p>
+                         </div>
+
+                         <div class="contact-section">
+                              <p class="contact-text">
+                                   At Cestasoft, we combine deep industry insight with cutting-edge innovation to
+                                   deliver transformative digital solutions. Let's work together to create innovative,
+                                   secure, and scalable digital solutions tailored to your goals.
+                              </p>
+                              <a href="./contact.html" class="contact-btn">
+                                   CONTACT US <i class="fas fa-arrow-right"></i>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="tab-pane" id="digital">
+                         <h3 class="tab-title">Digital Transformation Services</h3>
+                         <p class="tab-description">
+                              CestaSoft's Digital Transformation services cover every stage of your modernization
+                              journey—from digital strategy and business case development to enterprise software
+                              selection, architecture design, data governance, contract negotiation, and custom app
+                              development. We help you align technology with business goals for lasting growth.
+                         </p>
+
+                         <div class="services-grid">
+                              <div class="service-item">
+                                   <h5 class="service-title">Data Architecture and Governance Strategy</h5>
+                                   <p class="service-text">
+                                        These services support the development of a strong data architecture and
+                                        governance strategy by defining the roles and responsibilities of various data
+                                        sets and their interactions across systems. We also outline how each system
+                                        enhances and augments the data to ensure accuracy, consistency, and alignment
+                                        with business goals.
+                                   </p>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">Enterprise Software Selection</h5>
+                                   <p class="service-text">
+                                        This service supports a structured and objective approach to selecting
+                                        enterprise software solutions, including CRM, ERP, WMS, TMS, eCommerce
+                                        platforms, MES, and other technologies that form part of your enterprise
+                                        ecosystem.
+                                   </p>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">Business Case Development</h5>
+                                   <p class="service-text">
+                                        This service supports executives—such as CIOs and CFOs—in developing a strong
+                                        business case for digital transformation initiatives. We provide a structured
+                                        approach to evaluating return on investment (ROI) and total cost of ownership
+                                        (TCO), helping leaders make informed, data-driven decisions even if they lack
+                                        prior experience with these analyses.
+                                   </p>
+                              </div>
+                         </div>
+
+                         <div class="contact-section">
+                              <p class="contact-text">
+                                   At Cestasoft, we combine deep industry insight with cutting-edge innovation to
+                                   deliver transformative digital solutions. Let's work together to create innovative,
+                                   secure, and scalable digital solutions tailored to your goals.
+                              </p>
+                              <a href="./contact.html" class="contact-btn">
+                                   CONTACT US <i class="fas fa-arrow-right"></i>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="tab-pane" id="enterprise">
+                         <h3 class="tab-title">Enterprise Platforms & ERP Modernization</h3>
+                         <p class="tab-description">
+                              CestaSoft specializes in modernizing and integrating enterprise applications to help
+                              businesses operate more efficiently. We deliver cohesive enterprise ecosystems that reduce
+                              cost, improve operational agility, and boost performance.
+                         </p>
+
+                         <h4 style="color: var(--secondary); margin: 2rem 0 1rem;">SAP Expertise and Advisory</h4>
+
+                         <div class="sap-grid">
+                              <div class="sap-category">
+                                   <h5>SAP Advisory & Strategy</h5>
+                                   <ul>
+                                        <li>SAP roadmap development & readiness assessments</li>
+                                        <li>Cloud transformation planning (RISE with SAP, S/4HANA strategy)</li>
+                                        <li>Business process optimization & governance</li>
+                                   </ul>
+                              </div>
+
+                              <div class="sap-category">
+                                   <h5>SAP Implementation & Integration</h5>
+                                   <ul>
+                                        <li>End-to-end SAP Implementation (FICO, MM, SD, S/4 HANA)</li>
+                                        <li>SAP–non-SAP integration & middleware (IBM ACE, PI/PO)</li>
+                                        <li>Data migration & cutover management</li>
+                                   </ul>
+                              </div>
+
+                              <div class="sap-category">
+                                   <h5>Application Management & Support</h5>
+                                   <ul>
+                                        <li>24/7 SAP functional & technical support</li>
+                                        <li>System health monitoring & performance optimization</li>
+                                        <li>Incident, problem & change management</li>
+                                   </ul>
+                              </div>
+
+                              <div class="sap-category">
+                                   <h5>Automation, Testing & DevOps</h5>
+                                   <ul>
+                                        <li>CI/CD pipeline automation</li>
+                                        <li>Automated testing (CBTA, ATC, HP ALM)</li>
+                                        <li>DevOps enablement for SAP delivery</li>
+                                   </ul>
+                              </div>
+
+                              <div class="sap-category">
+                                   <h5>Analytics & Reporting</h5>
+                                   <ul>
+                                        <li>SAP Analytics Cloud, BW/4HANA, Embedded Analytics</li>
+                                        <li>Real-time dashboards & performance insights</li>
+                                   </ul>
+                              </div>
+
+                              <div class="sap-category">
+                                   <h5>Innovation & Extensions</h5>
+                                   <ul>
+                                        <li>Fiori UX design & extension development</li>
+                                        <li>Integration with AI, ML, and IoT platforms</li>
+                                        <li>Custom app and API development</li>
+                                   </ul>
+                              </div>
+                         </div>
+
+                         <div class="contact-section">
+                              <p class="contact-text">
+                                   At Cestasoft, we combine deep industry insight with cutting-edge innovation to
+                                   deliver transformative digital solutions. Let's work together to create innovative,
+                                   secure, and scalable digital solutions tailored to your goals.
+                              </p>
+                              <a href="./contact.html" class="contact-btn">
+                                   CONTACT US <i class="fas fa-arrow-right"></i>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="tab-pane" id="technologies">
+                         <h3 class="tab-title">Technologies We Work With</h3>
+                         <p class="tab-description">
+                              Our team is proficient in a wide range of modern technologies and frameworks, enabling us
+                              to deliver cutting-edge solutions across all platforms and environments.
+                         </p>
+
+                         <div class="services-grid">
+                              <div class="service-item">
+                                   <h5 class="service-title">Front End Technologies</h5>
+                                   <div class="tech-list">
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">Angular</span>
+                                        <span class="tech-tag">Vue.js</span>
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">CSS3</span>
+                                   </div>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">Back End Technologies</h5>
+                                   <div class="tech-list">
+                                        <span class="tech-tag">Ruby on Rails</span>
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">Python (Django, Flask)</span>
+                                        <span class="tech-tag">PHP (Laravel, Symfony)</span>
+                                        <span class="tech-tag">Java</span>
+                                        <span class="tech-tag">.Net (C#)</span>
+                                   </div>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">Mobile Development</h5>
+                                   <div class="tech-list">
+                                        <span class="tech-tag">iOS (Swift, Objective-C)</span>
+                                        <span class="tech-tag">Android (Kotlin, Java)</span>
+                                        <span class="tech-tag">Flutter</span>
+                                        <span class="tech-tag">React Native</span>
+                                   </div>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">Cloud and DevOps</h5>
+                                   <div class="tech-list">
+                                        <span class="tech-tag">AWS</span>
+                                        <span class="tech-tag">Microsoft Azure</span>
+                                        <span class="tech-tag">Digital Ocean</span>
+                                        <span class="tech-tag">Docker</span>
+                                        <span class="tech-tag">Kubernetes</span>
+                                        <span class="tech-tag">Jenkins</span>
+                                        <span class="tech-tag">Terraform</span>
+                                        <span class="tech-tag">Alauda</span>
+                                   </div>
+                              </div>
+
+                              <div class="service-item">
+                                   <h5 class="service-title">Version Control</h5>
+                                   <div class="tech-list">
+                                        <span class="tech-tag">Git (GitHub)</span>
+                                        <span class="tech-tag">GitLab</span>
+                                        <span class="tech-tag">Bitbucket</span>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="contact-section">
+                              <p class="contact-text">
+                                   At Cestasoft, we combine deep industry insight with cutting-edge innovation to
+                                   deliver transformative digital solutions. Let's work together to create innovative,
+                                   secure, and scalable digital solutions tailored to your goals.
+                              </p>
+                              <a href="./contact.html" class="contact-btn">
+                                   CONTACT US <i class="fas fa-arrow-right"></i>
+                              </a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+
+
+
+     <!-- Footer -->
+     <footer>
+          <div class="footer-container">
+               <div class="container_wrapper ">
+                    <div class="col_logo">
+                         <img src="./images/experience-innovation-cestasoft-200x106.png" alt="Cestasoft Logo"
+                              class="footer-logo">
+                    </div>
+                    <div class="social-icons">
+                         <a href="#"><i class="fab fa-facebook-f"></i></a>
+                         <a href="#"><i class="fab fa-twitter"></i></a>
+                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                         <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="col-12">
+                         <ul>
+                              <li>Company Brochure</li>
+                              <li>Privacy Policy</li>
+                              <li>Terms & Conditions</li>
+                         </ul>
+
+                    </div>
+                    <div class="col-12">
+                         <p class="footer-copyright">&copy; 2025 Cestasoft. All Rights Reserved.</p>
+                    </div>
+               </div>
+          </div>
+     </footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="script.js"></script>
+</body>
+
+</html>
